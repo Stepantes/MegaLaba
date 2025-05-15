@@ -6,6 +6,7 @@ import Dashboard from '../src/Pages/Dashboard';
 import LoginSignup from '../src/Assets/LoginSignup';
 import AvailableModules from '../src/Pages/AvailableModules';
 import MyModules from '../src/Pages/MyModules';
+import MyGreenhouses from '../src/Pages/MyGreenhouses';
 
 function PrivateRoute({ children }) {
     const { user } = useAuth();
@@ -14,18 +15,19 @@ function PrivateRoute({ children }) {
 
 function App() {
   return (
-      <AuthProvider>
-          <Router>
+      <Router>
+          <AuthProvider>
               <Routes>
                   <Route path="/login" element={<LoginSignup />} />
                   <Route element={<ProtectedRoute />}>
                       <Route path="/" element={<Dashboard />} />
+                      <Route path="/my-greenhouses" element={<MyGreenhouses />} />
                       <Route path="/available-modules" element={<AvailableModules />} />
                       <Route path="/my-modules" element={<MyModules />} />
                   </Route>
               </Routes>
-          </Router>
-      </AuthProvider>
+          </AuthProvider>
+      </Router>
   );
 }
 

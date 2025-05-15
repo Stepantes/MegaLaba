@@ -173,3 +173,15 @@ body {
     font-weight: 700;
     cursor: pointer;
 }
+
+.container_content {
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+    margin-top: 60px;
+    background: #fff;
+    padding-bottom: 0px;
+    width: 1200px;
+    height: 500px;
+    border-radius: 25px;
+}

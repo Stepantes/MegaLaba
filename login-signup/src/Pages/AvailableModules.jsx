@@ -2,6 +2,7 @@ import { useEffect, useState } from 'react';
 import { useAuth } from '../Assets/AuthContext';
 import { useNavigate } from 'react-router-dom';
 import Layout from './Layout';
+import '../Pages/MyModules.css';
 
 const AvailableModules = () => {
     const { user } = useAuth();
@@ -40,7 +41,6 @@ const AvailableModules = () => {
             }
             
             const data = await response.json();
-            // Фильтруем только модули без владельца (id === null)
             setModules(data);
             
         } catch (error) {
@@ -75,7 +75,7 @@ const AvailableModules = () => {
             }
             
             setSuccessMessage('Модуль успешно подключен!');
-            fetchAvailableModules(); // Обновляем список
+            fetchAvailableModules();
             
         } catch (error) {
             console.error('Ошибка подключения модуля:', error);
@@ -111,37 +111,39 @@ const AvailableModules = () => {
                 ) : modules.length === 0 ? (
                     <p className="no-modules-message">Нет доступных модулей для подключения</p>
                 ) : (
-                    <div className="modules-grid">
-                        {modules.map(module => (
-                            <div key={module.module_id} className="module-card">
-                                <div className="module-header">
-                                    <h3>{module.module_name || `Модуль ${module.module_id}`}</h3>
-                                    <span className={`status-badge ${module.is_active ? 'active' : 'inactive'}`}>
-                                        {module.is_active ? 'Активен' : 'Не активен'}
-                                    </span>
+                    <div className="available-modules-grid-scrollable">
+                        <div className="modules-grid">
+                            {modules.map(module => (
+                                <div key={module.module_id} className="module-card">
+                                    <div className="module-header">
+                                        <h3>{module.module_name || `Модуль ${module.module_id}`}</h3>
+                                        <span className={`status-badge ${module.is_active ? 'active' : 'inactive'}`}>
+                                            {module.is_active ? 'Активен' : 'Не активен'}
+                                        </span>
+                                    </div>
+                                    
+                                    <div className="module-details">
+                                        <p><strong>MAC:</strong> {module.mac_address}</p>
+                                        <p><strong>IP:</strong> {module.ip_address || 'Неизвестно'}</p>
+                                    </div>
+                                    
+                                    <button 
+                                        onClick={() => claimModule(module.module_id)}
+                                        className="claim-button"
+                                        disabled={claimingId === module.module_id}
+                                    >
+                                        {claimingId === module.module_id ? (
+                                            <>
+                                                <span className="button-spinner"></span>
+                                                Подключение...
+                                            </>
+                                        ) : (
+                                            'Подключить'
+                                        )}
+                                    </button>
                                 </div>
-                                
-                                <div className="module-details">
-                                    <p><strong>MAC:</strong> {module.mac_address}</p>
-                                    <p><strong>IP:</strong> {module.ip_address || 'Неизвестно'}</p>
-                                </div>
-                                
-                                <button 
-                                    onClick={() => claimModule(module.module_id)}
-                                    className="claim-button"
-                                    disabled={claimingId === module.module_id}
-                                >
-                                    {claimingId === module.module_id ? (
-                                        <>
-                                            <span className="button-spinner"></span>
-                                            Подключение...
-                                        </>
-                                    ) : (
-                                        'Подключить'
-                                    )}
-                                </button>
-                            </div>
-                        ))}
+                            ))}
+                        </div>
                     </div>
                 )}
             </div>

@@ -22,7 +22,7 @@
 .loading-spinner {
     border: 4px solid rgba(0, 0, 0, 0.1);
     border-radius: 50%;
-    border-top: 4px solid #3498db;
+    border-top: 4px solid #3b7688;
     width: 40px;
     height: 40px;
     animation: spin 1s linear infinite;
@@ -50,7 +50,7 @@
 
 .connect-button {
     padding: 10px 20px;
-    background-color: #1976d2;
+    background-color: #3b7688;
     color: white;
     border: none;
     border-radius: 4px;
@@ -60,7 +60,7 @@
 }
 
 .connect-button:hover {
-    background-color: #1565c0;
+    background-color: #3b7688;
 }
 
 .modules-grid {
@@ -155,12 +155,12 @@
 }
 
 .edit-button {
-    background-color: #1976d2;
+    background-color: #3b7688;
     color: white;
 }
 
 .edit-button:hover {
-    background-color: #1565c0;
+    background-color: #3b7688;
 }
 .module-edit-form {
     padding: 15px;
@@ -216,4 +216,35 @@
 
 .cancel-button:hover {
     background-color: #d32f2f;
+}
+
+.modules-grid-scrollable {
+    max-height: 60vh; /* Можно скорректировать по желанию */
+    overflow-y: auto;
+    padding-right: 8px; /* Для видимости скроллбара */
+}
+
+/* Для красоты: скрыть горизонтальный скроллбар */
+.modules-grid-scrollable::-webkit-scrollbar {
+    width: 8px;
+    background: #f0f0f0;
+}
+.modules-grid-scrollable::-webkit-scrollbar-thumb {
+    background: #bdbdbd;
+    border-radius: 4px;
+}
+
+.available-modules-grid-scrollable {
+    max-height: 60vh;
+    overflow-y: auto;
+    padding-right: 8px;
+}
+
+.available-modules-grid-scrollable::-webkit-scrollbar {
+    width: 8px;
+    background: #f0f0f0;
+}
+.available-modules-grid-scrollable::-webkit-scrollbar-thumb {
+    background: #bdbdbd;
+    border-radius: 4px;
 }

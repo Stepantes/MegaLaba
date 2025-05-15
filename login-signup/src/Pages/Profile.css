@@ -14,7 +14,6 @@
     width: 600px;
 }
 
-/* ... существующие стили ... */
 
 .module-card {
     background: #f9f9f9;
@@ -67,7 +66,7 @@ button.active {
 }
 
 button.edit-button {
-    background-color: #2196F3;
+    background-color: #5fa3b8;
     color: white;
 }
 
@@ -127,3 +126,364 @@ button:hover {
     border-radius: 8px;
     box-shadow: 0 2px 4px rgba(0,0,0,0.1);
 }
+
+.sidebar-layout {
+    display: flex;
+    min-height: 100vh;
+    background: #f5f6fa;
+}
+
+.dashboard-nav-vertical {
+    display: flex;
+    flex-direction: column;
+    width: 220px;
+    background: #ececec;
+    padding: 30px 0 0 0;
+    box-shadow: 2px 0 8px rgba(0,0,0,0.03);
+    min-height: 100vh;
+    border-radius: 18px 0 0 18px;
+    position: relative;
+}
+
+.nav-links-group {
+    flex: 1 1 auto;
+    display: flex;
+    flex-direction: column;
+}
+
+.logout-container {
+    margin-top: auto;
+    padding-bottom: 30px;
+    padding-left: 24px;
+}
+
+.logout-button-vertical {
+    padding: 10px 20px;
+    background: #3B3B3B;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    font-size: 16px;
+    cursor: pointer;
+    align-self: flex-start;
+    transition: background 0.2s;
+}
+
+.logout-button-vertical:hover {
+    background: #3B3B3B;
+}
+
+.nav-link-vertical {
+    display: flex;
+    align-items: center;
+    padding: 14px 24px;
+    font-size: 18px;
+    color: #333;
+    text-decoration: none;
+    background: none;
+    border: none;
+    outline: none;
+    position: relative;
+    transition: background 0.2s, color 0.2s;
+    cursor: pointer;
+}
+
+.nav-link-vertical:hover {
+    background: #e0e0e0;
+    color: #3b7688;
+}
+
+.nav-link-vertical.active {
+    background: #e8f0fe;
+    color: #3b7688;
+    font-weight: 600;
+}
+
+.active-bar {
+    display: inline-block;
+    width: 5px;
+    height: 28px;
+    background: #3b7688;
+    border-radius: 3px;
+    margin-right: 14px;
+    transition: background 0.2s;
+}
+
+.logout-button-vertical {
+    margin-top: auto;
+    margin-bottom: 30px;
+    margin-left: 24px;
+    padding: 10px 20px;
+    background: #3B3B3B;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    font-size: 16px;
+    cursor: pointer;
+    align-self: flex-start;
+    transition: background 0.2s;
+}
+
+.logout-button-vertical:hover {
+    background: #3B3B3B;
+}
+
+.dashboard-content {
+    flex: 1;
+    padding: 40px 40px 40px 40px;
+    background: #fff;
+    border-radius: 0 8px 8px 0;
+    min-height: 100vh;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.04);
+}
+
+.layout-centered-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: linear-gradient(#C1E9E9, #90c0d3);
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.sidebar-layout {
+    display: flex;
+    border-radius: 18px;
+    box-shadow: 0 4px 32px rgba(30, 14, 54, 0.10), 0 1.5px 6px rgba(30, 14, 54, 0.06);
+    max-width: 1100px;
+    width: 100vw;
+    min-width: 350px;
+    max-height: 90vh;
+    min-height: 600px;
+    height: 100vh;
+    margin: 40px auto;
+    overflow: hidden;
+    background: #f5f6fa;
+}
+
+.dashboard-nav-vertical {
+    display: flex;
+    flex-direction: column;
+    width: 220px;
+    background: #ececec;
+    padding: 30px 0 0 0;
+    box-shadow: 2px 0 8px rgba(0,0,0,0.03);
+    border-radius: 18px 0 0 18px;
+    position: relative;
+    height: 100%;
+    min-height: 0;
+}
+
+.dashboard-content {
+    flex: 1;
+    padding: 40px 40px 40px 40px;
+    background: #fff;
+    border-radius: 0 18px 18px 0;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.04);
+    min-width: 350px;
+    height: 100%;
+    min-height: 0;
+    overflow-y: auto;
+    max-height: 90vh;
+}
+
+.logotip {
+    width: 200px;
+    height: 56px;
+    border-radius: 10px;
+    margin-left: 24px;
+    margin-top: 18px;
+    margin-bottom: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.logotip img {
+    max-height: 100%;
+    max-width: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.my-modules-card {
+    border: 1.5px solid #d1d5db;
+    border-radius: 16px;
+    background: transparent;
+    padding: 28px 32px 24px 32px;
+    margin: 0px 0 0 0;
+    box-shadow: none;
+    min-width: 200px;
+    max-width: 200px;
+    display: flex;
+    flex-direction: column;
+}
+
+.my-modules-card h3 {
+    margin-top: 0;
+    margin-bottom: 18px;
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: #1e0e36;
+    flex-shrink: 0;
+}
+
+.my-modules-list-scrollable {
+    max-height: 100px; 
+    overflow-y: auto;
+    padding-right: 4px;
+}
+
+.my-modules-list-scrollable::-webkit-scrollbar {
+    width: 8px;
+    background: #f0f0f0;
+}
+.my-modules-list-scrollable::-webkit-scrollbar-thumb {
+    background: #bdbdbd;
+    border-radius: 4px;
+}
+
+.my-modules-list-scrollable {
+    scrollbar-width: thin;
+    scrollbar-color: #bdbdbd #f0f0f0;
+}
+
+.my-modules-card ul {
+    margin: 0;
+    padding-left: 20px;
+}
+
+.my-modules-card li {
+    font-size: 1rem;
+    color: #333;
+    margin-bottom: 8px;
+}
+
+.my-greenhouses-card {
+    border: 1.5px solid #d1d5db;
+    border-radius: 16px;
+    background: transparent;
+    padding: 28px 32px 24px 32px;
+    margin: 32px 0 0 0;
+    box-shadow: none;
+    min-width: 260px;
+    max-width: 480px;
+}
+.my-greenhouses-card h2 {
+    margin-top: 0;
+    margin-bottom: 18px;
+    font-size: 1.35rem;
+    font-weight: 600;
+    color: #1e0e36;
+}
+
+.my-greenhouses-card {
+    border: 1.5px solid #d1d5db;
+    border-radius: 16px;
+    background: transparent;
+    padding: 28px 32px 24px 32px;
+    margin: 32px 0 0 0;
+    box-shadow: none;
+    min-width: 260px;
+    max-width: 480px;
+}
+.my-greenhouses-card h2 {
+    margin-top: 0;
+    margin-bottom: 18px;
+    font-size: 1.35rem;
+    font-weight: 600;
+    color: #1e0e36;
+}
+
+.delete-greenhouse-btn {
+    background: #3B3B3B;
+    color: #fff;
+    border: none;
+    border-radius: 6px;
+    padding: 6px 14px;
+    font-size: 0.95rem;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+.delete-greenhouse-btn:hover {
+    background: #3B3B3B;
+}
+
+.dashboard-main-row {
+    display: flex;
+    flex-direction: row;
+    gap: 40px;
+    align-items: flex-start;
+}
+
+.dashboard-greenhouse-panel {
+    min-width: 320px;
+    max-width: 400px;
+    background: #f5f6fa;
+    border: 1.5px solid #d1d5db;
+    border-radius: 16px;
+    padding: 28px 32px 24px 32px;
+    box-shadow: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.dashboard-greenhouse-title {
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: #1e0e36;
+    margin-bottom: 18px;
+    text-align: center;
+}
+
+.dashboard-sensors-row {
+    display: flex;
+    flex-direction: row;
+    gap: 18px;
+    justify-content: center;
+    align-items: flex-end;
+    margin-top: 8px;
+}
+
+.sensor-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-width: 80px;
+    max-width: 120px;
+    padding: 10px 12px 8px 12px;
+    border-radius: 12px;
+    border: 1px solid #e0e0e0;
+    background: #fff;
+    position: relative;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.03);
+}
+
+.sensor-icon {
+    width: 32px;
+    height: 32px;
+    margin-bottom: 4px;
+}
+
+.sensor-value {
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: #1e0e36;
+    margin-bottom: 2px;
+}
+
+.sensor-label {
+    font-size: 0.98rem;
+    color: #555;
+    margin-bottom: 1px;
+}
+
+.sensor-unit {
+    font-size: 0.95rem;
+    color: #888;
+}
+

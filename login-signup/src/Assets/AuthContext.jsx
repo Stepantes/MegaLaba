@@ -1,3 +1,4 @@
+
 import React, { createContext, useState, useEffect, useContext } from 'react';
 import axios from 'axios';
 
@@ -7,7 +8,7 @@ export function AuthProvider({ children }) {
     const [user, setUser] = useState(null);
     const [loading, setLoading] = useState(true);
 
-    // Единая функция для всех запросов
+    // Универсальная функция для всех запросов с поддержкой cookie-сессий
     const makeRequest = async (method, url, data = null) => {
         try {
             const response = await axios({
@@ -21,6 +22,8 @@ export function AuthProvider({ children }) {
             });
             return response.data;
         } catch (error) {
+            // Логируем ошибку для диагностики
+            console.error('Ошибка в makeRequest:', error);
             throw error;
         }
     };
@@ -29,7 +32,9 @@ export function AuthProvider({ children }) {
         try {
             const data = await makeRequest('GET', '/api/user');
             setUser(data);
-        } catch {
+        } catch (error) {
+            // Логируем ошибку авторизации
+            console.warn('Ошибка авторизации (checkAuth):', error);
             setUser(null);
         } finally {
             setLoading(false);
@@ -50,6 +55,9 @@ export function AuthProvider({ children }) {
     useEffect(() => {
         checkAuth();
     }, []);
+
+    // Важно: если вы тестируете в одном браузере в разных вкладках, сессия будет общей!
+    // Для тестирования разных пользователей используйте разные браузеры или режим инкогнито.
 
     return (
         <AuthContext.Provider value={{ user, loading, login, logout, makeRequest }}>

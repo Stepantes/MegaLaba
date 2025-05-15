@@ -1,5 +1,5 @@
-import { Navigate, Outlet } from 'react-router-dom'; // ✅ fixed
-import { useAuth } from '../src/Assets/AuthContext'; // ✅ no need for '../src/...'
+import { Navigate, Outlet } from 'react-router-dom'; 
+import { useAuth } from '../src/Assets/AuthContext'; 
 
 const ProtectedRoute = () => {
     const { user, loading } = useAuth();

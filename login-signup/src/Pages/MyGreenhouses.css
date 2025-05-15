@@ -1,0 +1,188 @@
+.create-greenhouse-btn {
+    background: #5a99ac;
+    color: #fff;
+    border: none;
+    border-radius: 6px;
+    padding: 8px 18px;
+    font-size: 1rem;
+    cursor: pointer;
+    margin-bottom: 10px;
+    transition: background 0.2s;
+}
+.create-greenhouse-btn:hover {
+    background: #5a99ac;
+}
+
+.greenhouse-create-form {
+    margin-bottom: 18px;
+    padding: 16px 0 8px 0;
+    border-bottom: 1px solid #e0e0e0;
+}
+
+.greenhouse-create-form .form-group {
+    margin-bottom: 14px;
+}
+
+.greenhouse-create-form label {
+    font-weight: 500;
+    margin-bottom: 4px;
+    display: block;
+}
+
+.greenhouse-create-form input[type="text"],
+.greenhouse-create-form select {
+    width: 100%;
+    padding: 6px 10px;
+    border-radius: 5px;
+    border: 1px solid #bdbdbd;
+    font-size: 1rem;
+    margin-top: 2px;
+    margin-bottom: 6px;
+}
+
+.secondary-modules-list {
+    margin-top: 4px;
+    margin-bottom: 6px;
+    padding-left: 8px;
+}
+
+.save-button {
+    background: #1976d2;
+    color: #fff;
+    border: none;
+    border-radius: 6px;
+    padding: 8px 18px;
+    font-size: 1rem;
+    cursor: pointer;
+    margin-top: 8px;
+    transition: background 0.2s;
+}
+.save-button:hover {
+    background: #1256a3;
+}
+
+
+.greenhouses-list {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    margin-top: 18px;
+}
+
+.greenhouse-card {
+    border: 1.5px solid #d1d5db;
+    border-radius: 16px;
+    background: transparent;
+    padding: 20px 24px 16px 24px;
+    box-shadow: none;
+    min-width: 260px;
+    max-width: 480px;
+}
+
+.greenhouse-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
+
+.greenhouse-title {
+    font-size: 1.15rem;
+    font-weight: 600;
+    color: #1e0e36;
+}
+
+.greenhouse-modules-row {
+    display: flex;
+    flex-direction: row;
+    gap: 18px;
+    flex-wrap: wrap;
+    align-items: flex-end;
+    margin-top: 8px;
+}
+
+.greenhouse-module-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-width: 80px;
+    max-width: 120px;
+    padding: 6px 10px;
+    border-radius: 8px;
+    border: 1px solid #e0e0e0;
+    background: #fafbfc;
+    position: relative;
+}
+
+.main-module-star {
+    color: #f7b500;
+    font-size: 1.3rem;
+    font-weight: bold;
+    margin-bottom: 2px;
+    line-height: 1;
+    text-shadow: 0 1px 2px #fffbe6;
+}
+
+.module-name {
+    font-size: 1rem;
+    color: #1e0e36;
+    text-align: center;
+    word-break: break-word;
+}
+
+.no-modules-text {
+    color: #888;
+    font-size: 0.98rem;
+    font-style: italic;
+    padding: 6px 0;
+}
+
+.greenhouses-main-row {
+    display: flex;
+    flex-direction: row;
+    gap: 32px;
+    align-items: flex-start;
+}
+
+.my-greenhouses-card {
+    border: 1.5px solid #d1d5db;
+    border-radius: 16px;
+    background: transparent;
+    padding: 28px 32px 24px 32px;
+    margin: 0;
+    box-shadow: none;
+    min-width: 320px;
+    max-width: 540px;
+    flex: 1 1 0;
+}
+
+.greenhouse-create-side-panel {
+    border: 1.5px solid #d1d5db;
+    border-radius: 16px;
+    background: #fafbfc;
+    padding: 24px 24px 18px 24px;
+    min-width: 260px;
+    max-width: 270px;
+    box-shadow: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 0;
+}
+
+.greenhouse-create-side-text {
+    font-size: 1.05rem;
+    color: #1e0e36;
+    margin-bottom: 18px;
+    text-align: center;
+    font-weight: 500;
+}
+
+.greenhouse-module-item svg {
+    display: block;
+    margin: 0 auto 2px auto;
+    transition: filter 0.15s;
+}
+.greenhouse-module-item svg:hover {
+    filter: brightness(1.2) drop-shadow(0 0 4px #00bfff55);
+}
